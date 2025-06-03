@@ -1,0 +1,3 @@
+deployment:
+  imageURL: 010526266250.dkr.ecr.us-east-1.amazonaws.com/roboshop/user
+  imageVersion: 1.0.0
