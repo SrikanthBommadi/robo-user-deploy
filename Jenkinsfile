@@ -33,7 +33,7 @@ pipeline {
                 script{
                     withAWS(region: 'us-east-1', credentials: "aws-${environment}") {
                         sh """
-                            aws eks update-kubeconfig --region $REGION --name cluster-developer
+                            aws eks update-kubeconfig --region $REGION --name $PROJECT-developer
                             kubectl get nodes
                             cd helm
                             sed -i 's/IMAGE_VERSION/${params.version}/g' values-${environment}.yaml
